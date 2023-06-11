@@ -20,35 +20,7 @@ This proposed temporal model uses blink features to detect both early and deep d
 2. protobuf==3.20.*
 3. numpy==1.19.5
 
-For reference these are all the packages we had in our virtual enevironment but the important ones are the three mentioned above.
-
-
-* absl-py              1.4.0
-astor                0.8.1
-gast                 0.2.2
-google-pasta         0.2.0
-grpcio               1.54.2
-h5py                 3.8.0
-importlib-metadata   6.6.0
-Keras-Applications   1.0.8
-Keras-Preprocessing  1.1.2
-Markdown             3.4.3
-MarkupSafe           2.1.2
-numpy                1.19.5
-opt-einsum           3.3.0
-pip                  22.0.2
-protobuf             3.20.3
-setuptools           59.6.0
-six                  1.16.0
-tensorboard          1.15.0
-tensorflow           1.15.0
-tensorflow-estimator 1.15.1
-termcolor            2.3.0
-typing_extensions    4.5.0
-Werkzeug             2.2.3
-wheel                0.37.1
-wrapt                1.15.0
-zipp                 3.15.0
+For reference these are the important packages needed to run the repository, if any other packages are missing, install them and there shouldn't be any compatability issues.
 
 #### Citation:
 All documents (such as publications, presentations, posters, etc.) that report results, analysis, research, or equivalent that were obtained by using this source should cite the following research paper: https://arxiv.org/abs/1904.07312
