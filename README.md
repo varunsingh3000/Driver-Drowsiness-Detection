@@ -1,10 +1,9 @@
 #  Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection
 
-This is the repository for the implemenation of the Driver Drowsiness Detection problem presented in the paper "A Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection". The model used was Hierarchical Multiscale Long Short-Term Memory (HM-LSTM) and details about it can be found in the above mentioned paper. This repository is created for the CS4245 Seminar Computer Vision by Deep Learning (2022/23 Q4) and provides the instructions for the setup of the repository and describes our implementation in detail. The blog describing our approach and methodology can be found [here](https://hackmd.io/s7w_NxOMSiCWSou_JPYbAw). The original details and description of the paper repository can be found [here](https://github.com/rezaghoddoosian/Early-Drowsiness-Detection).
+This is the repository for the implemenation of the Driver Drowsiness Detection problem presented in the paper "[A Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection](https://arxiv.org/abs/1904.07312)". The model used was Hierarchical Multiscale Long Short-Term Memory (HM-LSTM) and details about it can be found in the above mentioned paper. This repository is created for the CS4245 Seminar Computer Vision by Deep Learning (2022/23 Q4) and provides the instructions for the setup of the repository and describes our implementation in detail. The blog describing our approach and methodology can be found [here](https://hackmd.io/s7w_NxOMSiCWSou_JPYbAw). The original details and description of the paper repository can be found [here](https://github.com/rezaghoddoosian/Early-Drowsiness-Detection).
 
 
-
-### These codes were tested on Ubuntu 16.04 with tensorflow version 1.8
+### These codes were tested on Ubuntu 22.04 with tensorflow version 1.15.0
 
 The supporting code and data used for the paper:"A Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection":
 
@@ -15,70 +14,40 @@ This proposed temporal model uses blink features to detect both early and deep d
 
 *You can refer to the comments inside each .py file for more detailed information*
 
-### 0- Make sure all .py files are downloaded then install all the required packages. You can refer to the following link for a short instruction on installing some of the required packages like dlib:
-https://www.pyimagesearch.com/2017/03/27/how-to-install-dlib/
+### Make sure all .py files are downloaded then install all the required packages. 
 
-Or for the conda environment you can use the following command lines:
+tensorflow==1.15
+protobuf==3.20.*
+numpy==1.19.5
 
-~$ conda install -c anaconda tensorflow-gpu==1.8.0 
+For reference these are all the packages we had in our virtual enevironment but the important ones are the three mentioned above.
 
-~$ sudo apt-get install build-essential cmake
-
-~$ sudo apt-get install libgtk-3-dev
-
-~$ sudo apt-get install libboost-all-dev
-
-~$ conda install -c anaconda scipy
-
-~$ wget https://bootstrap.pypa.io/get-pip.py
-
-~$ conda install -c menpo dlib
-
-~$ conda install -c conda-forge scikit-image
-
-~$ pip install imutils
-
-~$ conda install scikit-learn
-
-~$ conda install -c conda-forge opencv
-
-	
-### 1- Run Blink_Video.py:
-
-  This file is fed by the input video(the directory should be given to the path variable). Then, it detects the blinks and outputs four features of all blinks in a text file.
-  
-  ("Trained_SVM_C=1000_gamma=0.1_for 7kNegSample.sav" is used for blink detection.)
-  
-  *Use the link below to download "shape_predictor_68_face_landmarks.dat"
-  
-  https://drive.google.com/open?id=1nrfc-_pdIxNn2yO1_e7CxTyJQIk3A-vX
-  
-  "shape_predictor_68_face_landmarks.dat" is the pre-trained facial landmark detector inside the dlib library.
-
-### 2-Run Preprocessing.py
-
-  This file gets three text files (blink features in three drowsiness levels) as the main input and preprocesses them for the subsequent steps. The outputs are .npy files.
-  
-  For convenience, these .npy files ({Blinks, BlinksTest, Labels, LabelsTest}_30_FoldX.npy) are provided for each X as the test fold used for five fold cross validation. For example Blinks_30_Fold4.npy is the training set consisted of all the folds except fold 4, and  BlinksTest_30_Fold4.npy is the data from fold 4. If decided to apply this method to a different dataset, then the hard coded "start_indices" array in Training.py should be adjusted accordingly. More info about "start_indices is mentioned in the Training.py". Finally, to clarify, these .npy files are generated from step 1 and 2 on the UTA-RLDD dataset so one might decide to generate their own   .npy files to train. 
-
-### 3-Run Training.py:
-
-  This code is used to train based on the .npy files generated in step 2. The model details and hyperparameters are all set here. This code is also used for testing. Here, one fold from the dataset (UTA-RLDD in this case) is picked as the test fold and the other four are used for training. The output is the training and test results and accuracies based on the pre-defined metrics in the paper.
- 
- 
-  For convenience, five pre-trained models are provided, where each model used one of the folds as the test set in a five fold cross validation.
-  
-  These three files are pre-trained models for the training session of fold X, where fold X had been used as the test fold:
-  
-    my_modelX.data-00000-of-00001
-    
-    my_modelX.index
-    
-    my_modelX.meta
-  
-  
-  
-NOTE: References used for each code are mentioned on top of each code.
+absl-py              1.4.0
+astor                0.8.1
+gast                 0.2.2
+google-pasta         0.2.0
+grpcio               1.54.2
+h5py                 3.8.0
+importlib-metadata   6.6.0
+Keras-Applications   1.0.8
+Keras-Preprocessing  1.1.2
+Markdown             3.4.3
+MarkupSafe           2.1.2
+numpy                1.19.5
+opt-einsum           3.3.0
+pip                  22.0.2
+protobuf             3.20.3
+setuptools           59.6.0
+six                  1.16.0
+tensorboard          1.15.0
+tensorflow           1.15.0
+tensorflow-estimator 1.15.1
+termcolor            2.3.0
+typing_extensions    4.5.0
+Werkzeug             2.2.3
+wheel                0.37.1
+wrapt                1.15.0
+zipp                 3.15.0
 
 #### Citation:
 All documents (such as publications, presentations, posters, etc.) that report results, analysis, research, or equivalent that were obtained by using this source should cite the following research paper: https://arxiv.org/abs/1904.07312
