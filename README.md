@@ -1,6 +1,6 @@
 #  Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection
 
-
+This is the repository for the implemenation of the Driver Drowsiness Detection problem presented in the paper "A Realistic Dataset and Baseline Temporal Model for Early Drowsiness Detection". The model used was Hierarchical Multiscale Long Short-Term Memory (HM-LSTM) and details about it can be found in the above mentioned paper. This repository is created for the CS4245 Seminar Computer Vision by Deep Learning (2022/23 Q4) and provides the instructions for the setup of the repository and describes our implementation in detail. The blog describing our approach and methodology can be found [here](https://hackmd.io/s7w_NxOMSiCWSou_JPYbAw). The original details and description of the paper repository can be found [here](https://github.com/rezaghoddoosian/Early-Drowsiness-Detection).
 
 
 
