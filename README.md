@@ -16,13 +16,14 @@ This proposed temporal model uses blink features to detect both early and deep d
 
 ### Make sure all .py files are downloaded then install all the required packages. 
 
-tensorflow==1.15
-protobuf==3.20.*
-numpy==1.19.5
+1. tensorflow==1.15
+2. protobuf==3.20.*
+3. numpy==1.19.5
 
 For reference these are all the packages we had in our virtual enevironment but the important ones are the three mentioned above.
 
-absl-py              1.4.0
+
+* absl-py              1.4.0
 astor                0.8.1
 gast                 0.2.2
 google-pasta         0.2.0
