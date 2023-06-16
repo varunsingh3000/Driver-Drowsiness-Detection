@@ -22,7 +22,7 @@ This proposed temporal model uses blink features to detect both early and deep d
 
 For reference these are the important packages needed to run the repository, if any other packages are missing, install them and there shouldn't be any compatability issues.
 
-### Introduction
+## Introduction
 
 Drowsiness detection is crucial in domains such as driving and workplace safety, as it helps mitigate the risks associated with fatigue-related accidents and fatalities. The goal of the original paper [1] is to create practical and easily deployable systems that can identify drowsiness at an early stage. 
 
@@ -42,20 +42,18 @@ Consensus among researchers [6,7] supports the existence of three primary source
  
 State-of-the-art benchmarks do not use temporal features, and these are incorporated in [1]. Although physiological measurements like heart rate, electrocardiogram (ECG), electromyogram (EMG), electroencephalogram (EEG)[4,5], and electrooculogram (EOG)[4] have been utilized for drowsiness monitoring, their intrusiveness and impracticality in car or workspace settings limit their usage, despite their high accuracy. The DROZY dataset [8] includes various drowsiness-related signals like EEG, EOG, and NIR images, obtained from genuinely drowsy subjects. However, the RLDD dataset [1] offers three advantages over DROZY: a larger number of subjects, data capturing each subject in all three alertness classes, and diverse recording conditions using personal cell phones with different backgrounds and color video.
 
-
 ## Data
 
-![](https://hackmd.io/_uploads/rypcuEqwn.png)
+![data](https://github.com/varunsingh3000/Driver-Drowsiness-Detection/assets/64498789/e1d1186c-f950-493a-aa42-23f88450f1fa)
 
 The RLDD dataset [1] used in this project focuses on drowsiness detection and includes 60 healthy participants. The participants were instructed to record three videos of themselves in different drowsiness states based on the Karolinska Sleepiness Scale (KSS). The dataset contains 180 RGB videos, approximately ten minutes each, categorized into three classes: "alert" (0), "low vigilant" (5), and "drowsy" (10). Participants provided the labels based on their subjective assessment while recording the videos. The dataset's total size is 111.3 gigabytes, and it was recorded using personal cell phones or web cameras, resulting in variations in video resolutions and qualities. Cross-validation was performed with five folds of 12 participants each.
-
 
 ## Baseline Model
 
 A multi-stage pipeline was used for drowsiness detection. The stages were:
 1. Blink Detection and Blink Feature Extraction: use of blink-related features like duration, amplitude, and eye opening velocity to capture temporal patterns in human eyes. It uses a pre-trained face detector to detect blinks and extracts blink features. A post-processing step is applied to identify multiple blinks in a single detection.
 
-![](https://hackmd.io/_uploads/rk7MtmcD3.png)
+![model](https://github.com/varunsingh3000/Driver-Drowsiness-Detection/assets/64498789/2d7675f1-1fda-4823-bb22-7ce2e5e23751)
 
 2. Drowsiness Detection Pipeline:
         a. Preprocessing: To handle individual differences in blinking patterns, the features are normalized across subjects. The first third of blinks in an alert state video is used to compute mean and standard deviation for normalization.
