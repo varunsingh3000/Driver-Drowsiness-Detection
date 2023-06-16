@@ -32,8 +32,6 @@ The paper also presents a baseline method called the Hierarchical Multiscale Lon
 
 Throughout this blog post, we will explore the paper's contributions, discuss related work in the field of drowsiness detection, and provide an overview of the RLDD dataset and the proposed baseline method. We will also delve into the experiments conducted to evaluate the model's performance and discuss the results obtained. Additionally, we will highlight the conclusions that we arrived at and challenges we faced during implementation.
 
-
-
 ## Related Work
 
 In this section, we delve into the research conducted on drowsiness detection and elucidate the challenges encountered by previous studies. [2]] focuses on driver drowsiness detection using Convolutional Neural Networks (CNNs). It demonstrates that models trained on publicly available datasets can suffer from overfitting and exhibit racial bias. The authors propose a novel visualization technique using Principal Component Analysis (PCA) to identify groups of people where there might be potential discrimination and combine it with a model accuracy overlay.
@@ -66,7 +64,6 @@ A multi-stage pipeline was used for drowsiness detection. The stages were:
     
 ## Approach
 
-
 We aimed to explore and compare different variations of the above described baseline model to improve the drowsiness detection system. These variations involve testing different architectures and configurations. Specifically, we experimented with the following model variations:
 
 1. HMLSTM with different hyperparameters: The baseline model utilizes a hierarchical multiscale LSTM (HM-LSTM) network to capture temporal patterns in blinking. To further optimize the model's performance, we tested different hyperparameters. By adjusting hyperparameters such as the number of LSTM layers, hidden units, learning rate, or regularization techniques,we assessed the impact of these changes on the model's ability to detect drowsiness accurately.
@@ -84,8 +81,6 @@ The following four four evaluation metrics were used to assess the model's perfo
 where $C^s_i$ is a binary value, equal to 0 if the i-th blink segment has been classified correctly, and 1 otherwise.
 3. Video Accuracy (VA): VA is the main metric used to assess overall accuracy. It measures the percentage of entire videos (not individual segments) that are correctly classified by the model.
 4. Video Regression Error (VRE): VRE calculates the regression error for videos. It penalizes wrongly classified videos based on the distance between the regressed output and the true state border. This metric indicates the margin of error for misclassified videos.
-
-
 
 ## Results and Discussion
 
