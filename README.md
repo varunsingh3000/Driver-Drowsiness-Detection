@@ -139,15 +139,25 @@ The implementation of the code lacked sufficient comments and documentation, mak
 ## References
 
 [1] Ghoddoosian, R., Galib, M., & Athitsos, V. (2019). A realistic dataset and baseline temporal model for early drowsiness detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (pp. 0-0).
+
 [2] Ngxande, M., Tapamo, J. R., & Burke, M. (2020, January). Detecting inter-sectional accuracy differences in driver drowsiness detection algorithms. In 2020 International SAUPEC/RobMech/PRASA Conference (pp. 1-6). IEEE.
+
 [3] L. K. McIntire, R. A. McKinley, C. Goodyear, and J. P. McIntire. Detection of vigilance performance using eye blinks. Applied ergonomics, 45(2):354–362, 2014.
+
 [4] U. Svensson. Blink behaviour based drowsiness detection. Technical report, 2004
+
 [5] Q. Massoz, T. Langohr, C. Franc¸ois, and J. G. Verly. The ulg-multimodality drowsiness database (called drozy) and examples of use. In Applications of Computer Vision (WACV), 2016 IEEE Winter Conference on, pages 1–7. IEEE, 2016.
+
 [6] E. Tadesse, W. Sheng, and M. Liu. Driver drowsiness detection through hmm based dynamic modeling. In Robotics and Automation (ICRA), 2014 IEEE International Conference on, pages 4003–4008. IEEE, 2014.
+
 [7] B. Reddy, Y.-H. Kim, S. Yun, C. Seo, and J. Jang. Realtime driver drowsiness detection for embedded system using model compression of deep neural networks. In Computer Vision and Pattern Recognition Workshops (CVPRW), 2017 IEEE Conference on, pages 438–445. IEEE, 2017.
+
 [8] The ULg Multimodality Drowsiness Database (called DROZY) and Examples of Use", by Quentin Massoz, Thomas Langohr, Clémentine François, Jacques G. Verly, Proceedings of the 2016 IEEE Winter Conference on Applications of Computer Vision (WACV 2016), Lake Placid, NY, March 7-10, 2016.
+
 [9] S. Park, F. Pan, S. Kang, and C. D. Yoo. Driver drowsiness detection system based on feature representation learning using various deep networks. In Asian Conference on Computer Vision, pages 154–164. Springer, 2016.
+
 [10] Ching-Hua Weng, Ying-Hsiu Lai, Shang-Hong Lai, “Driver Drowsiness Detection via a Hierarchical Temporal Deep Belief Network”, In Asian Conference on Computer Vision Workshop on Driver Drowsiness Detection from Video, Taipei, Taiwan, Nov. 2016.
+
 
 #### Citation:
 All documents (such as publications, presentations, posters, etc.) that report results, analysis, research, or equivalent that were obtained by using this source should cite the following research paper: https://arxiv.org/abs/1904.07312
